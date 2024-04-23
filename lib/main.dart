@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+import 'package:myapp/src/form.dart';
+import 'package:myapp/src/myhome.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 
 void main() async {
@@ -20,75 +23,19 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp.router(
+      routerConfig: GoRouter(initialLocation: '/inicio', routes: [
+        GoRoute(path: '/add', builder: (context, state) => formulario1()),
+        GoRoute(
+          path: '/inicio',
+          builder: (context, state) => MyHomePage(title: 'my'),
+        )
+      ]),
       title: 'Flutter Demo',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
-    );
-  }
-}
-
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key, required this.title});
-
-  final String title;
-
-  @override
-  State<MyHomePage> createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-  //indica el flujo de nuevos participantes
-  final _participantesStream =
-      //el nombre que va ahi es el nombre de la tabla
-      Supabase.instance.client.from('Participantes').stream(primaryKey: ['id']);
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('mi tabla'),
-      ),
-      body: StreamBuilder<List<Map<String, dynamic>>>(
-        stream: _participantesStream,
-        builder: (context, snapshot) {
-          if (!snapshot.hasData) {
-            return const Center(child: CircularProgressIndicator());
-          }
-          final Participantes = snapshot.data!;
-          return ListView.builder(
-              itemCount: Participantes.length,
-              itemBuilder: (context, index) {
-                return ListTile(
-                  title: Text(Participantes[index]['nombre']),
-                );
-              });
-        },
-      ),
-      floatingActionButton: FloatingActionButton(
-          onPressed: () {
-            showDialog(
-                context: context,
-                builder: ((context) {
-                  return SimpleDialog(
-                    title: const Text('agregar'),
-                    contentPadding: const EdgeInsets.symmetric(horizontal: 20),
-                    children: [
-                      TextFormField(
-                        onFieldSubmitted: (value) async {
-                          await Supabase.instance.client
-                              .from('Participantes')
-                              .insert({'nombre': value});
-                          //el nombre que va antes de value es por el nombre de la columna a la que se inserta
-                        },
-                      )
-                    ],
-                  );
-                }));
-          },
-          child: const Icon(Icons.add)),
     );
   }
 }
