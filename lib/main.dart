@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:myapp/src/firma.dart';
 import 'package:myapp/src/form.dart';
 import 'package:myapp/src/myhome.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
@@ -29,6 +30,10 @@ class MyApp extends StatelessWidget {
         GoRoute(
           path: '/inicio',
           builder: (context, state) => MyHomePage(title: 'my'),
+        ),
+        GoRoute(
+          path: '/firma',
+          builder: (context, state) => IngresoFirma(),
         )
       ]),
       title: 'Flutter Demo',

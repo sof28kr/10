@@ -15,7 +15,7 @@ class _MyHomePageState extends State<MyHomePage> {
   //indica el flujo de nuevos participantes
   final _participantesStream =
       //el nombre que va ahi es el nombre de la tabla
-      Supabase.instance.client.from('Participantes').stream(primaryKey: ['id']);
+      Supabase.instance.client.from('participantes').stream(primaryKey: ['id']);
   @override
   Widget build(BuildContext context) {
     return Scaffold(

@@ -1,5 +1,11 @@
+import 'dart:typed_data';
+
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+import 'package:myapp/src/firma.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
+
+Image img = Image.asset('');
 
 class formulario1 extends StatefulWidget {
   const formulario1({super.key});
@@ -22,6 +28,7 @@ class _formulario1State extends State<formulario1> {
         title: const Text('agregando'),
       ),
       body: ListView(
+        padding: EdgeInsets.symmetric(horizontal: 16, vertical: 12),
         children: [
           Container(
             padding: EdgeInsets.all(15),
@@ -29,6 +36,15 @@ class _formulario1State extends State<formulario1> {
               controller: nombrevariable,
               decoration: InputDecoration(hintText: 'nombre'),
             ),
+          ),
+          Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: [
+            Text('Ingrese su Firma'),
+            FilledButton(
+                onPressed: () => context.push('/firma'),
+                child: Text('Registrar Firma')),
+          ]),
+          SizedBox(
+            height: 40,
           ),
           FilledButton(
               onPressed: () async {
