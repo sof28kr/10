@@ -1,24 +1,23 @@
 import 'package:flutter/material.dart';
 import 'package:myapp/config%20/AppColors.dart';
 
-class welcomePage extends StatefulWidget {
-  const welcomePage({super.key});
+class Welcome extends StatelessWidget {
+  const Welcome({super.key});
 
-  @override
-  State<welcomePage> createState() => _welcomePageState();
-}
-
-class _welcomePageState extends State<welcomePage> {
   @override
   Widget build(BuildContext context) {
-    var colores = Theme.of(context).extension<AppColors>();
     return Scaffold(
-      body: Container(
-        decoration:
-            BoxDecoration(gradient: LinearGradient(colors: Colors.accents)),
-
-        // child: Text('hello', style: TextStyle(color: colores!.c2)),
-      ),
+      body: Container(decoration: BoxDecoration( 
+        gradient: LinearGradient(colors: [
+          Color(0xffC4ACCD),
+          Color(0xffF0EAF3),
+        ],
+       	)
+      ),)
     );
   }
 }
+
+
+
+

@@ -31,7 +31,7 @@ class MyApp extends StatelessWidget {
         GoRoute(path: '/add', builder: (context, state) => formulario1()),
         GoRoute(
           path: '/inicio',
-          builder: (context, state) => welcomePage(),
+          builder: (context, state) => Welcome(),
         ),
         GoRoute(
           path: '/firma',
@@ -53,6 +53,7 @@ class MyApp extends StatelessWidget {
           )
         ],
         useMaterial3: true,
+
       ),
     );
   }
