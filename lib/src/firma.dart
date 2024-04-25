@@ -65,11 +65,6 @@ class IngresoFirma extends StatelessWidget {
       final imageSignature = await image.toByteData(
           format: ImageByteFormat.png); //tipo datos en formato png
 
-      //desde aca subiremos los datos a supabase
-      //https://www.youtube.com/watch?v=aWFYOo9Yfo4
-      //https://www.youtube.com/watch?v=aWFYOo9Yfo4
-      // https://www.youtube.com/watch?v=4ERX__Y908k
-
       Navigator.of(context).push(
           MaterialPageRoute(builder: (BuildContext context) => formulario1()));
 
