@@ -94,6 +94,14 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
+  flutter_inset_box_shadow:
+    dependency: transitive
+    description:
+      name: flutter_inset_box_shadow
+      sha256: "0b1930ed5f4ad84b11b41dda907fbc5d4c12929a4c51455c626e5937b47ffb93"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.0.8"
   flutter_lints:
     dependency: "direct dev"
     description:
@@ -320,6 +328,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.1.1"
+  pretty_animated_buttons:
+    dependency: "direct main"
+    description:
+      name: pretty_animated_buttons
+      sha256: e78b7d4128710dde2c1c6ef0ab223ea616f15ec4a2396203a59e6cf8cc355662
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.0.1"
   realtime_client:
     dependency: transitive
     description:
@@ -400,6 +416,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.3.2"
+  simple_animated_button:
+    dependency: "direct main"
+    description:
+      name: simple_animated_button
+      sha256: "128cf48cd3002c323eaf23738386674d5830eef09443291387627b2bff864a9b"
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.0.9"
   sky_engine:
     dependency: transitive
     description: flutter
@@ -577,10 +601,10 @@ packages:
     dependency: transitive
     description:
       name: vm_service
-      sha256: a75f83f14ad81d5fe4b3319710b90dec37da0e22612326b696c9e1b8f34bbf48
+      sha256: e7d5ecd604e499358c5fe35ee828c0298a320d54455e791e9dcf73486bc8d9f0
       url: "https://pub.dev"
     source: hosted
-    version: "14.2.0"
+    version: "14.1.0"
   web:
     dependency: transitive
     description:
