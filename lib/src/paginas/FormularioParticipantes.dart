@@ -5,8 +5,8 @@ import 'package:myapp/config%20/AppColors.dart';
 import 'package:pretty_animated_buttons/configs/pkg_sizes.dart';
 import 'package:pretty_animated_buttons/pretty_animated_buttons.dart';
 
-class Welcome extends StatelessWidget {
-  const Welcome({super.key});
+class FormularioParticipantes extends StatelessWidget {
+  const FormularioParticipantes({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -27,15 +27,15 @@ class Welcome extends StatelessWidget {
             children: [
               Padding(
                 padding: EdgeInsets.symmetric(horizontal: 25, vertical: 25),
-                child: Row(mainAxisAlignment: MainAxisAlignment.end, children: [
-                  IconButton(
-                    onPressed: () {},
-                    icon: Icon(
-                      Icons.info_rounded,
-                      size: 40,
-                    ),
-                    style: ButtonStyle(
-                        iconColor: MaterialStatePropertyAll(colores!.c4)),
+                child:
+                    Row(mainAxisAlignment: MainAxisAlignment.start, children: [
+                  Container(
+                    width: 100,
+                    height: 15,
+                    decoration: BoxDecoration(
+                        image: DecorationImage(
+                            image: AssetImage('assets/CITEtex-Cusco.png'),
+                            fit: BoxFit.cover)),
                   )
                 ]),
               ),
@@ -58,19 +58,19 @@ class Welcome extends StatelessWidget {
                     fontFamily: 'Lato',
                     fontSize: 40,
                     fontWeight: FontWeight.w400,
-                    color: colores.c1),
+                    color: colores!.c1),
               ),
               SizedBox(height: 50),
               PrettySlideUnderlineButton(
-                label: 'Crear un nuevo evento ',
+                label: 'volver ',
                 labelStyle: TextStyle(fontSize: 16, color: colores.c3),
-                onPressed: () {},
+                onPressed: () => context.push('/inicio'),
                 secondSlideColor: colores.c1,
               ),
               SizedBox(height: 50),
               PrettyBorderButton(
-                label: '   Registrar Participante   ',
-                onPressed: () => context.push('/ListadoParticipantes'),
+                label: 'Registrar',
+                onPressed: () {},
                 labelStyle: const TextStyle(fontSize: 20),
                 bgColor: Color(0xffC4ACCD),
                 borderColor: Color(0xff6C3082),

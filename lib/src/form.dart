@@ -61,7 +61,7 @@ class _formulario1State extends State<formulario1> {
 
                 Navigator.of(context).pop();
               },
-              child: Text('pa la db'))
+              child: Text('Registrar Participante'))
         ],
       ),
     );

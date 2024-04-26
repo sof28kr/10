@@ -38,7 +38,6 @@ dependencies:
   supabase_flutter: ^2.5.1
   go_router: ^13.2.4
   syncfusion_flutter_signaturepad: ^25.1.41
-  simple_animated_button: ^0.0.9
   pretty_animated_buttons: ^0.0.1
 
 dev_dependencies:

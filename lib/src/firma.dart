@@ -87,7 +87,7 @@ class IngresoFirma extends StatelessWidget {
         SnackBar(
           content: Text('¡Firma guardada correctamente!'),
           duration:
-              Duration(seconds: 1), // Ajusta la duración según tu preferencia
+              Duration(seconds: 2), // Ajusta la duración según tu preferencia
         ),
       ); // Close the dialog
     } catch (error) {

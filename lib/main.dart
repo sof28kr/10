@@ -4,6 +4,7 @@ import 'package:myapp/config%20/AppColors.dart';
 import 'package:myapp/src/firma.dart';
 import 'package:myapp/src/form.dart';
 import 'package:myapp/src/myhome.dart';
+import 'package:myapp/src/paginas/FormularioParticipantes.dart';
 import 'package:myapp/src/paginas/welcomePage.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 
@@ -36,24 +37,25 @@ class MyApp extends StatelessWidget {
         GoRoute(
           path: '/firma',
           builder: (context, state) => IngresoFirma(),
-        )
+        ),
+        GoRoute(
+          path: '/ListadoParticipantes',
+          builder: (context, state) => MyHomePage(title: 'Lista Participantes'),
+        ),
       ]),
       title: 'Flutter Demo',
-      theme: ThemeData(
-        extensions: const [
-          AppColors(
-            c1: Color(0xff2A3439),
-            c2: Color(0xffCBA135),
-            c3: Color(0xff6C3082),
-            c4: Color(0xff89599B),
-            c5: Color(0xffA783B4),
-            c6: Color(0xffC4ACCD),
-            c7: Color(0xffE2D6E6),
-            c8: Color(0xffF0EAF3),
-          )
-        ],
-        useMaterial3: true,
-      ),
+      theme: ThemeData(extensions: const [
+        AppColors(
+          c1: Color(0xff2A3439),
+          c2: Color(0xffCBA135),
+          c3: Color(0xff6C3082),
+          c4: Color(0xff89599B),
+          c5: Color(0xffA783B4),
+          c6: Color(0xffC4ACCD),
+          c7: Color(0xffE2D6E6),
+          c8: Color(0xffF0EAF3),
+        )
+      ], useMaterial3: true, fontFamily: 'Lato'),
     );
   }
 }
