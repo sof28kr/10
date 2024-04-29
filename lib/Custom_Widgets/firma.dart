@@ -1,12 +1,9 @@
 import 'dart:typed_data';
 import 'dart:ui';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:go_router/go_router.dart';
-import 'package:myapp/src/form.dart';
-import 'package:supabase_flutter/supabase_flutter.dart';
 import 'package:syncfusion_flutter_signaturepad/signaturepad.dart';
+import 'package:myapp/Views/Views.dart';
 
 Uint8List? imagenuit;
 

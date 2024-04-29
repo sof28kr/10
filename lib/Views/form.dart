@@ -1,8 +1,5 @@
-import 'dart:typed_data';
-
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:myapp/src/firma.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 
 Image img = Image.asset('');
