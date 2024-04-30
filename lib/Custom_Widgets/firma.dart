@@ -31,7 +31,10 @@ class IngresoFirma extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
                   ElevatedButton(
-                      onPressed: () => onSubmit(context),
+                      onPressed: () {
+                        onSubmit(context);
+                        Navigator.pop(context);
+                      },
                       child: const Text('guardar')),
                   SizedBox(
                     width: 50,

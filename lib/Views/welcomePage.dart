@@ -65,7 +65,9 @@ class Welcome extends StatelessWidget {
               PrettySlideUnderlineButton(
                 label: 'Crear un nuevo evento ',
                 labelStyle: TextStyle(fontSize: 16, color: colores.c3),
-                onPressed: () {},
+                onPressed: () {
+                  context.push('/f2');
+                },
                 secondSlideColor: colores.c1,
               ),
               SizedBox(height: 50),

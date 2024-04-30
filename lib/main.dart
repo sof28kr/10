@@ -30,6 +30,10 @@ class MyApp extends StatelessWidget {
           builder: (context, state) => Welcome(),
         ),
         GoRoute(
+          path: '/f2',
+          builder: (context, state) => FormularioParticipantes(),
+        ),
+        GoRoute(
           path: '/firma',
           builder: (context, state) => IngresoFirma(),
         ),
