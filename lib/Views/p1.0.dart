@@ -1,13 +1,9 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:go_router/go_router.dart';
-import 'package:myapp/Custom_Widgets/AppColors.dart';
-import 'package:myapp/Custom_Widgets/CustomFoms.dart';
-import 'package:myapp/Models/ParticipantesModelo.dart';
 import 'package:pretty_animated_buttons/configs/pkg_sizes.dart';
 import 'package:pretty_animated_buttons/pretty_animated_buttons.dart';
 import 'package:provider/provider.dart';
+import 'package:myapp/Views/Views.dart';
 
 class FormularioParticipantes extends StatefulWidget {
   const FormularioParticipantes({super.key});

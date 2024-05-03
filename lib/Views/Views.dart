@@ -6,3 +6,6 @@ export 'package:myapp/Views/welcomePage.dart';
 export 'package:myapp/Custom_Widgets/AppColors.dart';
 export 'package:myapp/Custom_Widgets/BotonDinamico.dart';
 export 'package:myapp/Custom_Widgets/firma.dart';
+
+export 'package:myapp/Custom_Widgets/CustomFoms.dart';
+export 'package:myapp/Models/ParticipantesModelo.dart';
